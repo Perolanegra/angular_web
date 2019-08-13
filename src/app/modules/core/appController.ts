@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AbstractControl } from '@angular/forms';
 import { debounceTime, tap } from "rxjs/operators";
 import { MatDialogRef, MatDialog } from '@angular/material';
 import { DialogAguardeComponent } from 'src/app/shared/dialogs/dialogAguarde/dialogAguarde.component';
 import { DialogConfirmacaoComponent } from 'src/app/shared/dialogs/dialogConfirmacao/dialogConfirmacao.component';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AppController {
@@ -13,7 +13,7 @@ export class AppController {
 
     constructor(private dialog: MatDialog,
     private router: Router,
-    private toastr: ToastrService) {}
+    private toastr: ToastrService) { }
 
     tratarErro(err): void {
         //Mensagem a ser exibida
@@ -102,7 +102,6 @@ export class AppController {
             }
             return 0;
         });
-
     }
 
      /** 
@@ -157,10 +156,11 @@ export class AppController {
     public async navigate(pPage: string) {
         const dialogAguarde = this.openDialogAguarde();
         try {
-            await this.router.navigate(['/' + pPage]).catch(error => {
-                this.tratarErro(error);
+            await this.router.navigate(['/' + pPage]).catch(err => {
+                this.tratarErro(err);
             });
-        } finally {
+        }
+         finally {
             dialogAguarde.close();
         }
     }

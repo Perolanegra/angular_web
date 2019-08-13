@@ -1,0 +1,25 @@
+.borda-topo {
+    border-top: 2px solid #0065c9;
+    margin: 1px 0 0 0px;
+}
+
+.topo {
+    background-color: #07309c;
+    padding: 4px 0;
+}
+
+.content-topo {
+    position: relative;
+    background-color: #F1EEE9;
+    max-height: 70px;
+    border-bottom: 2px solid #0065c9;
+}
+
+.content-topo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #07309c;
+    bottom: -4px;
+}

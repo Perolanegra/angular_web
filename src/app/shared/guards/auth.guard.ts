@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AuthGuardService implements CanActivate {
 
   constructor(private router: Router) { }
-  private isAuthenticated: boolean = true;
+  private isAuthenticated: boolean = true; // atualmente permitindo todas as rotas.
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
     return this.isAuthenticated;

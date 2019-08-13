@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuardService } from 'src/app/shared/guards/auth.guard';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
 
     {
-        path: 'inicio',
+        path: 'home',
         component: HomeComponent,
         resolve: {
 

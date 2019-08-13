@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CarrinhoComponent } from './carrinho.component';
 import { AuthGuardService } from 'src/app/shared/guards/auth.guard';
-
+import { ProdutoComponent } from './produto.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'meu-carrinho', pathMatch: 'full' },
+    { path: '', redirectTo: 'produto', pathMatch: 'full' },
 
     {
-        path: 'meu-carrinho',
-        component: CarrinhoComponent,
+        path: 'produto',
+        component: ProdutoComponent,
         resolve: {
 
         },
@@ -25,4 +24,4 @@ const routes: Routes = [
     // resolvers
   ]
 })
-export class CarrinhoRoutingModule { }
+export class ProdutoRoutingModule { }

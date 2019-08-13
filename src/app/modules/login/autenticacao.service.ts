@@ -8,11 +8,11 @@ export class AutenticacaoService {
 
     constructor() { }
 
-    async obterAcessToken() {
+    obterAcessToken() {
 
     }
 
-    async atualizarAcessToken() {
+    atualizarAcessToken() {
         
     }
 }

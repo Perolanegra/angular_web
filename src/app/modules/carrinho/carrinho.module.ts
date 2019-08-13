@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CarrinhoRoutingModule } from './carrinho.routing.module';
-import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { CarrinhoComponent } from './carrinho.component';
 import { CarrinhoService } from './carrinho.service';
 
 @NgModule({

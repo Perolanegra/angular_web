@@ -241,4 +241,19 @@ export class AppController {
         return lObjRetorno;
     }
 
+    criarParamsEndpoint(pNomes: string[], pValores: any[]): string {
+        var lRetorno = '';
+        for (let i = 0; i < pNomes.length; i++) {
+          if (pValores[i] != undefined && pValores[i] != null) {
+            if (i > 0) {
+              lRetorno += '&';
+            }
+            lRetorno += pNomes[i] + '=' + encodeURIComponent(pValores[i]);
+          }
+    
+        }
+    
+        return lRetorno;
+    }
+
 }

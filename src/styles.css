@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo.pink.css";
+
+.toast-position {
+    top: 50px;
+    bottom: 30px;
+    right: 10px;
+}
+
+.material-icons.red {
+    color: red;
+}
+
+.material-icons.green {
+    color: green;
+}
+
+.material-icons.yellow {
+    color: yellow;
+}
+
+.material-icons.blue {
+    color: blue;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.divider {
+    margin-top: 10px !important;
+}
+
+.link {
+    color: #007bff !important;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}

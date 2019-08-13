@@ -11,11 +11,14 @@ import { MaterialModule } from './shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ToastrModule } from 'ngx-toastr';
 import { MatTooltipModule, MatTableModule, MatSortModule, MatPaginatorModule } from '@angular/material';
+import { DialogAguardeComponent } from './shared/dialogs/dialogAguarde/dialogAguarde.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogAguardeComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,10 @@ import { MatTooltipModule, MatTableModule, MatSortModule, MatPaginatorModule } f
     CoreModule,
     LoginModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-position',
+      closeButton: true
+    }),
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -32,6 +39,9 @@ import { MatTooltipModule, MatTableModule, MatSortModule, MatPaginatorModule } f
     MatTableModule,
     MatSortModule,
     MatPaginatorModule
+  ],
+  entryComponents: [
+    DialogAguardeComponent
   ],
   exports: [
     CoreModule

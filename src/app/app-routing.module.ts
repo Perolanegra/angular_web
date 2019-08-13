@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [AuthGuardService]
+    // canActivate: [AuthGuardService]
   },
   {
     path: 'carrinho',
@@ -15,5 +15,4 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   }
 ];
-
 export const AppRoutingModule = RouterModule.forRoot(routes, { useHash: true, onSameUrlNavigation: 'reload' });

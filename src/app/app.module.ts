@@ -6,6 +6,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from './modules/core/core.module';
 import { LoginModule } from './modules/login/login.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { LoginModule } from './modules/login/login.module';
     AppRoutingModule,
     RouterModule,
     CoreModule,
-    LoginModule
+    LoginModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   exports: [
     CoreModule

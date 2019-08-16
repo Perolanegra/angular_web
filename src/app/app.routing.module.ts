@@ -3,12 +3,7 @@ import { AuthGuardService } from './shared/guards/auth.guard';
 import { LoginComponent } from './modules/login/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  {
-    path: 'home',
-    loadChildren: './modules/home/home.module#HomeModule',
-    canActivate: [AuthGuardService]
-  },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'login',
     component: LoginComponent,

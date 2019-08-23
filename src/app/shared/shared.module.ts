@@ -14,7 +14,7 @@ import { AppMaskDirective } from './directives/appMask.directive';
         CUSTOM_ELEMENTS_SCHEMA
     ],
     declarations: [ // componentes de filtro, tabelas, trees, Rodapés, diretivas...
-        AppMaskDirective        
+        AppMaskDirective
     ],
     exports: [ // tudo que será usado na aplicação.
         CommonModule,

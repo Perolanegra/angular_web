@@ -7,9 +7,9 @@ import { AppController } from '../core/appController';
     styleUrls: ['./produto.component.css']
 })
 export class ProdutoComponent implements OnInit {
-    
+
     constructor(public appController: AppController) {}
-    
+
     ngOnInit(): void {
         console.log('ProdutoComponent Works!');
     }

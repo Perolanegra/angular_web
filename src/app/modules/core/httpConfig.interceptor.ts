@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { AppController } from './appController';
@@ -11,7 +11,7 @@ export class HttpConfigInterceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         const dialogAguarde = this.appController.openDialogAguarde();
-        const token: string = ''; // implementar getAcessToken
+        const token = ''; // implementar getAcessToken
 
         if(token) {
             request = request.clone({ headers: request.headers.set('Authorization', 'Bearer ' + token) });
